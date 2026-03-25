@@ -47,8 +47,8 @@ public class Hospital {
         this.consultas = consultas;
     }
     
-    public Consulta registrarConsulta(){
-        
-    }
+    /*public Consulta registrarConsulta(){
+       
+    }*/
             
 }

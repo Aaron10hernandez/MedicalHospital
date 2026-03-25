@@ -11,19 +11,15 @@ package com.mycompany.medicalhospital.models;
 public class Medico extends Persona{
     private String especialidad;
     private String tarjetaProfesional;
+    private int consultorio;
 
     public Medico() {
     }
-    
-    public Medico(String especialidad, String tarjetaProfesional, String nombre, int edad, int cedula) {
-        super(nombre, edad, cedula);
-        this.especialidad = especialidad;
-        this.tarjetaProfesional = tarjetaProfesional;
-    }
 
-    public Medico(String especialidad, String tarjetaProfesional) {
+    public Medico(String especialidad, String tarjetaProfesional, int consultorio) {
         this.especialidad = especialidad;
         this.tarjetaProfesional = tarjetaProfesional;
+        this.consultorio = consultorio;
     }
 
     public String getEspecialidad() {
@@ -41,12 +37,28 @@ public class Medico extends Persona{
     public void setTarjetaProfesional(String tarjetaProfesional) {
         this.tarjetaProfesional = tarjetaProfesional;
     }
+
+    public int getConsultorio() {
+        return consultorio;
+    }
+
+    public void setConsultorio(int consultorio) {
+        this.consultorio = consultorio;
+    }
     
-    public void atender(c:Consulta){
+    public void atender(Consulta c){
+        
+        c.setFecha("10/01/2007");
+        System.out.println(c.getFecha());
         
     }
     
-    public String toString(){
-        return "hola";
+    @Override
+    public String toString() {
+        return "Medico{" + "especialidad=" + especialidad + ", tarjetaProfesional=" + tarjetaProfesional + ", consultorio=" + consultorio + '}';
     }
+
+    
+    
+    
 }
