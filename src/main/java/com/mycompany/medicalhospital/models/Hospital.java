@@ -5,12 +5,16 @@
 package com.mycompany.medicalhospital.models;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
  * @author ESTUDIANTE
  */
 public class Hospital {
+    
+    Scanner sc = new Scanner(System.in);
+    
     private String nombre;
     private String ciudad;
     private ArrayList<Consulta> consultas;
@@ -47,8 +51,23 @@ public class Hospital {
         this.consultas = consultas;
     }
     
-    /*public Consulta registrarConsulta(){
+    public void registrarConsulta(){
+        Consulta c = new Consulta();
+        
+        System.out.println("Fecha: "); String escribir= sc.nextLine();
+        c.setFecha(escribir);
+        
+        System.out.println("Motivo: "); escribir= sc.nextLine();
+        c.setMotivo(escribir);
+        
+        System.out.println("Diagnostico: "); escribir= sc.nextLine();
+        c.setDiagnostico(escribir);
        
-    }*/
+        System.out.println("Duracion: "); int min= sc.nextInt();
+        c.setDuracionMinutos(min);
+        
+        System.out.println("========================");
+       System.out.println("Consulta registrada.");
+    }
             
 }
