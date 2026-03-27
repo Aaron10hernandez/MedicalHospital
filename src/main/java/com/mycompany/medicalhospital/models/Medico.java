@@ -48,15 +48,16 @@ public class Medico extends Persona{
     
     public void atender(Consulta c){
         
-        c.setFecha("10/01/2007");
-        System.out.println(c.getFecha());
+        System.out.println("Se está atendiendo la consulta de la fecha" + c.getFecha());
         
     }
-    
+
     @Override
     public String toString() {
         return "Medico{" + "especialidad=" + especialidad + ", tarjetaProfesional=" + tarjetaProfesional + ", consultorio=" + consultorio + '}';
     }
+    
+    
 
     
     

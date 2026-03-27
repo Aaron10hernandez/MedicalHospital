@@ -21,14 +21,39 @@ public class ClinicalHospital {
         Scanner sc = new Scanner(System.in);
         
         Consulta c1 = new Consulta();
-        Hospital h = new Hospital();
-        
-        System.out.println("=========");
-        
-        
-        h.setConsultas(h.registrarConsulta());
+        Hospital h1 = new Hospital();
+        Medico m1 = new Medico();
         
         
+        //CONSULTAS Y HOSPITAL
+        
+        //CONSULTAS
+       //Aqui se registra una consulta y se guarda en el arrayList "consultas"
+       //que está como atributo en la clase Hospital
+        h1.setConsultas(h1.registrarConsulta());
+        
+        h1.getConsultas();
+                
+        //HOSPITAL
+        
+        
+        //MEDICO
+        m1.setNombre("Aaron");
+        m1.setCedula(007);
+        m1.setEdad(19);
+        m1.setTelefono("+57 123");
+        m1.setTarjetaProfesional("No se que poner");
+        m1.setConsultorio(10);
+        m1.setEspecialidad("Neuro Cirujano");
+        
+        m1.atender(c1);
+        
+        //=====================================
+        
+        
+        
+        
+       
         
         
         

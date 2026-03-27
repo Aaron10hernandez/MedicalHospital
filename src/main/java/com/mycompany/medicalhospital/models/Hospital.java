@@ -17,15 +17,17 @@ public class Hospital {
     
     private String nombre;
     private String ciudad;
-    private ArrayList<Consulta> consultas;
+    private ArrayList<Consulta> consultas = new ArrayList();
 
     public Hospital() {
     }
 
-    public Hospital(String nombre, String ciudad) {
+    public Hospital(String nombre, String ciudad, ArrayList<Consulta> consultas) {
         this.nombre = nombre;
         this.ciudad = ciudad;
+        this.consultas = consultas;
     }
+    
 
     public String getNombre() {
         return nombre;
@@ -47,17 +49,17 @@ public class Hospital {
         return consultas;
     }
 
-    public void setConsultas(ArrayList<Consulta> consultas) {
-        this.consultas = consultas;
+    public void setConsultas(Consulta c) {
+        this.consultas.add(c);
     }
-    
-    public void registrarConsulta(){
+
+    public Consulta registrarConsulta(){
         Consulta c = new Consulta();
         
-        System.out.println("Fecha: "); String escribir= sc.nextLine();
-        c.setFecha(escribir);
+        System.out.println("Fecha: "); String fecha= sc.nextLine();
+        c.setFecha(fecha);
         
-        System.out.println("Motivo: "); escribir= sc.nextLine();
+        System.out.println("Motivo: "); String escribir= sc.nextLine();
         c.setMotivo(escribir);
         
         System.out.println("Diagnostico: "); escribir= sc.nextLine();
@@ -66,8 +68,11 @@ public class Hospital {
         System.out.println("Duracion: "); int min= sc.nextInt();
         c.setDuracionMinutos(min);
         
-        System.out.println("========================");
+        sc.nextLine();
+        
        System.out.println("Consulta registrada.");
+       
+       return c;
     }
             
 }
