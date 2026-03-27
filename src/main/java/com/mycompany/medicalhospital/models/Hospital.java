@@ -53,26 +53,20 @@ public class Hospital {
         this.consultas.add(c);
     }
     
-    public Consulta registrarConsulta(){
-        Consulta c = new Consulta();
-        
-        System.out.println("Fecha: "); String fecha= sc.nextLine();
-        c.setFecha(fecha);
-        
-        System.out.println("Motivo: "); String escribir= sc.nextLine();
-        c.setMotivo(escribir);
-        
-        System.out.println("Diagnostico: "); escribir= sc.nextLine();
-        c.setDiagnostico(escribir);
-       
-        System.out.println("Duracion: "); int min= sc.nextInt();
-        c.setDuracionMinutos(min);
-        
-        sc.nextLine();
-        
-       System.out.println("Consulta registrada.");
-       
-       return c;
+    public void registrarConsulta( Consulta c, ArrayList <Consulta> cosultas){
+         
+        consultas.add(c);
+       System.out.println("Consulta registrada!");
     }
+    
+    public void listarConsultas( ArrayList <Consulta> consultas){
+        
+        for( Consulta c : consultas){
+            
+            System.out.println( c);
+        }
+    }
+    
+    
             
 }

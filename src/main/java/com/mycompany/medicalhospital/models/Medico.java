@@ -16,11 +16,20 @@ public class Medico extends Persona{
     public Medico() {
     }
 
+    public Medico(String especialidad, String tarjetaProfesional, int consultorio, String nombre, int edad, int cedula, String telefono) {
+        super(nombre, edad, cedula, telefono);
+        this.especialidad = especialidad;
+        this.tarjetaProfesional = tarjetaProfesional;
+        this.consultorio = consultorio;
+    }
+
     public Medico(String especialidad, String tarjetaProfesional, int consultorio) {
         this.especialidad = especialidad;
         this.tarjetaProfesional = tarjetaProfesional;
         this.consultorio = consultorio;
     }
+
+    
 
     public String getEspecialidad() {
         return especialidad;
@@ -46,10 +55,13 @@ public class Medico extends Persona{
         this.consultorio = consultorio;
     }
     
-    public void atender(Consulta c){
+    public void atender(Consulta c, Medico m){
         
-        System.out.println("Se está atendiendo la consulta!");
-        
+        System.out.println(m.getNombre() + " esta atendiendo la consulta con fecha: "+c.getFecha());
+    }
+    
+    public void presentarse(Medico m){
+        System.out.println("Hola, mi nombre es: "+m.getNombre());
     }
 
     @Override
