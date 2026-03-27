@@ -17,8 +17,6 @@ public class ClinicalHospital {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
-       
-        Scanner sc = new Scanner(System.in);
         
         Consulta c1 = new Consulta();
         Hospital h1 = new Hospital();
@@ -32,9 +30,13 @@ public class ClinicalHospital {
        //que está como atributo en la clase Hospital
         h1.setConsultas(h1.registrarConsulta());
         
-        h1.getConsultas();
+        h1.getConsultas(); //Retorna las consultas guardadas en el arrayList
                 
         //HOSPITAL
+        h1.setNombre("Salud Total");
+        h1.setCiudad("Dubai");
+        
+        
         
         
         //MEDICO
@@ -48,7 +50,8 @@ public class ClinicalHospital {
         
         m1.atender(c1);
         
-        //=====================================
+        System.out.println("El medico");
+        
         
         
         

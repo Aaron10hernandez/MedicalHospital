@@ -52,7 +52,7 @@ public class Hospital {
     public void setConsultas(Consulta c) {
         this.consultas.add(c);
     }
-
+    
     public Consulta registrarConsulta(){
         Consulta c = new Consulta();
         

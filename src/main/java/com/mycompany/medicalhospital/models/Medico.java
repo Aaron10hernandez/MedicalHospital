@@ -48,7 +48,7 @@ public class Medico extends Persona{
     
     public void atender(Consulta c){
         
-        System.out.println("Se está atendiendo la consulta de la fecha" + c.getFecha());
+        System.out.println("Se está atendiendo la consulta!");
         
     }
 
