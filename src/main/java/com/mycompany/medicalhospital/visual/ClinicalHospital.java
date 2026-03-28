@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
-package com.mycompany.medicalhospital;
+package com.mycompany.medicalhospital.visual;
 
 import com.mycompany.medicalhospital.models.Consulta;
 import com.mycompany.medicalhospital.models.Hospital;
