@@ -5,15 +5,12 @@
 package com.mycompany.medicalhospital.models;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  *
  * @author ESTUDIANTE
  */
 public class Hospital {
-    
-    Scanner sc = new Scanner(System.in);
     
     private String nombre;
     private String ciudad;
@@ -52,6 +49,13 @@ public class Hospital {
     public void setConsultas(Consulta c) {
         this.consultas.add(c);
     }
+
+    @Override
+    public String toString() {
+        return "Hospital{" + "nombre=" + nombre + ", ciudad=" + ciudad + ", consultas=" + consultas + '}';
+    }
+    
+    
     
     public void registrarConsulta( Consulta c, ArrayList <Consulta> cosultas){
          

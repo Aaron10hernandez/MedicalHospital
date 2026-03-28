@@ -51,25 +51,23 @@ public class ClinicalHospital {
         m1.atender(c1, m1);
         m2.atender(c2, m2);
         
+        //SEGUNDA PARTE
+        //1)
         h2.listarConsultas(h2.getConsultas());
         
         System.out.println("=============================");
         
+        //2)
         m1.presentarse(m1);
         m2.presentarse(m2);
         
+        //Punto 3
+        m2.setNombre("Vegetta");
+        h1.setCiudad("Cartagena");
+        c3.setDiagnostico("Astigmatismo");
         
-        
-        
-        
-        
-        
-        
-        
-       
-        
-        
-        
+        System.out.println(m2);
+        System.out.println(h2);
         
     }
 }
